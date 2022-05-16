@@ -1,16 +1,21 @@
 package com.mendel.challenge.transaction;
 
-import io.swagger.v3.oas.annotations.OpenAPIDefinition;
-import io.swagger.v3.oas.annotations.info.Info;
+import com.mendel.challenge.transaction.controller.TransactionController;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 @SpringBootTest
-@OpenAPIDefinition(info = @Info(title = "Transaction API", version = "1.0", description = "Transactions manage"))
 class ApiTransactionApplicationTests {
+
+	@Autowired
+	private TransactionController TransactionController;
 
 	@Test
 	void contextLoads() {
+		assertThat(TransactionController).isNotNull();
 	}
 
 }

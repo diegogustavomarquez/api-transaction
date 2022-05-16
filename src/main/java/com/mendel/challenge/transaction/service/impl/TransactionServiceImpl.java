@@ -20,7 +20,7 @@ public class TransactionServiceImpl implements TransactionService {
 
     @Override
     @Transactional
-    public void save(Transaction transaction) throws BusinessException {
+    public Transaction save(Transaction transaction) throws BusinessException {
         //valido que no este registrado el transaction id
         if(transactionRepository.existsById(transaction.getTransactionId())){
             throw new BusinessException("transaction_id","Ya existe transaction_id ya esta registrado");
@@ -29,7 +29,7 @@ public class TransactionServiceImpl implements TransactionService {
         if(null != transaction.getParentId() && !transactionRepository.existsById(transaction.getParentId())){
             throw new BusinessException("parent_id","No existe una transaccion con el parent_id al que se intenta asociar");
         }
-        transactionRepository.save(transaction);
+        return transactionRepository.save(transaction);
     }
 
     @Override
@@ -51,7 +51,7 @@ public class TransactionServiceImpl implements TransactionService {
     }
 
     /**
-     * Realiza una busqued recursiva buscando todos los hijos asociados a una transaccion y sumando sus montos
+     * Realiza una busqueda recursiva buscando todos los hijos asociados a una transaccion y sumando sus montos
      *
      * @param transaction
      * @return

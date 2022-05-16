@@ -16,7 +16,7 @@ public interface TransactionService {
      * @param transaction
      * @throws BusinessException
      */
-    public void save(Transaction transaction) throws BusinessException;
+    public Transaction save(Transaction transaction) throws BusinessException;
 
     /**
      * Devuelve la lista de id de transacciones asociados al type dado
