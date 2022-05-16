@@ -75,6 +75,7 @@
 				<version>${project.parent.version}</version>
 			</plugin>
 		</plugins>
+		<finalName>api-transaction</finalName>
 	</build>
 
 </project>
