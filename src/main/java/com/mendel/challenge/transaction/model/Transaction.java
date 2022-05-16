@@ -1,7 +1,6 @@
 package com.mendel.challenge.transaction.model;
 
 import com.mendel.challenge.transaction.dto.TransactionDTO;
-import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
