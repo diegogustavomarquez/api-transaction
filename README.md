@@ -1,6 +1,6 @@
 # api-transaction
 
-Challenge en Java 11 el que se utilizo lo siguiente:
+Challenge en Java 11 en el que se utilizo lo siguiente:
 - IntelliJ
 - Postman
 
