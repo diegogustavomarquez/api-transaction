@@ -8,7 +8,7 @@ Challenge en Java 11 en el que se utilizo lo siguiente:
 
 mvn clean package
 
-## Generar imagen en docker:
+## Generar y corren imagen en docker:
 
 docker build -t api-transaction:latest .
 
@@ -22,6 +22,6 @@ http://localhost:8080/actuator/health
 
 http://localhost:8080/swagger-ui/index.html
 
-## Pruebas funcionales con posmtan
+## Pruebas funcionales con postman
 
 ./api-transaction.postman_collection.json
